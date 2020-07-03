@@ -1,0 +1,31 @@
+{
+  "name": "szamlazom/api-php",
+  "description": "szamlazom.hu PHP API interface",
+  "homepage": "https://szamlazom.hu",
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "Gabor Gyorvari",
+      "email": "gabor@deeb.hu"
+    }
+  ],
+  "require": {
+    "php": ">=5.6",
+    "ext-curl": "*"
+  },
+  "autoload": {
+    "classmap": [
+      "src/client.php",
+      "src/const.php",
+      "src/country.php",
+      "src/currency.php",
+      "src/invoice.php",
+      "src/number.php",
+      "src/partner.php",
+      "src/payment.php",
+      "src/product.php",
+      "src/request.php",
+      "src/vat.php"
+    ]
+  }
+}
