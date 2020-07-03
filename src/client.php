@@ -14,6 +14,7 @@ class Szamlazom_Client
         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
         curl_setopt($ch, CURLOPT_TIMEOUT, 10);
         curl_setopt($ch, CURLOPT_USERPWD, Szamlazom_Const::$api_key);
+        curl_setopt($ch, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);
 
         if ($method == 'POST') {
             curl_setopt($ch, CURLOPT_POST, true);
