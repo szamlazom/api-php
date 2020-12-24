@@ -82,10 +82,12 @@ class Szamlazom_Invoice_List extends Szamlazom_List
  * @property-read   int $user_id                    Rögzítő felhasználó azonosítója a számlázóban
  * @property-read   int $cancelled                  Számla azonosítója ami érvénytelenítette a számlát
  * @property-read   int $cancelling                 Számla azonosítója amit érvénytelenít
+ * @property-read   string $partner_vat_status         Partner ÁFA státusza
  * @property-read   string $partner_name               Partner neve
  * @property-read   string $partner_tax_nr             Partner adószáma
  * @property-read   string $partner_tax_nr_eu          Partner közösségi adószáma
  * @property-read   string $partner_tax_nr_group       Partner csoportos adószáma
+ * @property-read   string $partner_tax_nr_third       Partner harmadik országbeli adószáma
  * @property-read   string $partner_country            Partner címének országa
  * @property-read   string $partner_country_id         Partner címének ország azonosítója a számlázóban
  * @property-read   string $partner_country_code       Partner címének ország kódja

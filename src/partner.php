@@ -19,6 +19,7 @@ class Szamlazom_Partner_List extends Szamlazom_List
  * @property $tax_nr string
  * @property $tax_nr_eu string
  * @property $tax_nr_group string
+ * @property $tax_nr_third string
  * @property $post_name string
  * @property $post_country string
  * @property $post_country_id int
@@ -80,6 +81,7 @@ class Szamlazom_Partner extends Szamlazom_Request
             'tax_nr',
             'tax_nr_eu',
             'tax_nr_group',
+            'tax_nr_third',
             'post_name',
             'country',
             'country_id',
