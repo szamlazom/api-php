@@ -34,6 +34,7 @@ class Szamlazom_Partner_List extends Szamlazom_List
  * @property $address_floor string
  * @property $address_door string
  * @property $bank_account string
+ * @property $vat_status string
  */
 class Szamlazom_Partner extends Szamlazom_Request
 {
@@ -100,7 +101,7 @@ class Szamlazom_Partner extends Szamlazom_Request
 
     protected function getRequiredAttributes()
     {
-        return array('name', 'zip', 'city', 'address');
+        return array('name', 'zip', 'city', 'address', 'vat_status');
     }
 
 }
