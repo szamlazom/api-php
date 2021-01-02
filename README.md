@@ -7,7 +7,7 @@ Ez a csomag használható a szamlazom.hu API interfész kommunikációjához
 Telepítés a Composer segítségével:
 
 ```
-composer require szamlazom/pap-api
+composer require szamlazom/api-php
 ```
 
 A használathoz a composer autolader betöltését követően csak az API kulcsot kell megadni:
