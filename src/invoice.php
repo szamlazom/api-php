@@ -63,6 +63,7 @@ class Szamlazom_Invoice_List extends Szamlazom_List
  * @property        int $payment_id                 Fizetési mód azonosítója a számlázóban
  * @property        int $currency_id                Pénznem azonosítója a számlázóban
  * @property        string $expire                     Teljesítési dátuma
+ * @property        string $accounting_delivery                     Számviteli teljesítés dátuma
  * @property        string $due                        Fizetési határidő dátuma
  * @property        string $comment                    Megjegyzés
  * @property        string $nr_order                   Rendelésszám
@@ -172,7 +173,8 @@ class Szamlazom_Invoice extends Szamlazom_Request
             'number_id',
             'lang',
             'cash_accounting_indicator',
-            'comment_header'
+            'comment_header',
+            'accounting_delivery'
         );
     }
 
