@@ -14,6 +14,7 @@ class Szamlazom_Number_List extends Szamlazom_List
  * @property $type int
  * @property $default int
  * @property $closed string
+ * @property $bank_account string
  */
 class Szamlazom_Number extends Szamlazom_Request
 {
@@ -41,7 +42,7 @@ class Szamlazom_Number extends Szamlazom_Request
 
     protected function getOptionalAttributes()
     {
-        return array('id', 'type', 'default');
+        return array('id', 'type', 'default', 'bank_account');
     }
 
     protected function getRequiredAttributes()

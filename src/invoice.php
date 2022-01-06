@@ -59,30 +59,30 @@ class Szamlazom_Invoice_List extends Szamlazom_List
 }
 
 /**
- * @property        int $partner_id                 Partner azonosítója a számlázóban
- * @property        int $payment_id                 Fizetési mód azonosítója a számlázóban
- * @property        int $currency_id                Pénznem azonosítója a számlázóban
+ * @property        int $partner_id                    Partner azonosítója a számlázóban
+ * @property        int $payment_id                    Fizetési mód azonosítója a számlázóban
+ * @property        int $currency_id                   Pénznem azonosítója a számlázóban
  * @property        string $expire                     Teljesítési dátuma
- * @property        string $accounting_delivery                     Számviteli teljesítés dátuma
+ * @property        string $accounting_delivery        Számviteli teljesítés dátuma
  * @property        string $due                        Fizetési határidő dátuma
  * @property        string $comment                    Megjegyzés
  * @property        string $nr_order                   Rendelésszám
  * @property        string $nr_other                   Egyéb azonosító
- * @property        int $number_id                  Sorszám azonosítója a számlázóban
- * @property        array $items                      Sortételek listája Szamlazom_Invoice_Item_List
+ * @property        int $number_id                     Sorszám azonosítója a számlázóban
+ * @property        array $items                       Sortételek listája Szamlazom_Invoice_Item_List
  * @property        string $lang                       Nyelv (hu|en)
  * @property        string $cash_accounting_indicator  Pénzforgalmi jelző (Y|N)
  * @property-read   string $nr                         Számla sorszáma
  * @property-read   string $currency_code              Pénznem ISO kódja
- * @property-read   int $currency_round             Pénznem kerekítés tizedes száma
- * @property-read   float $currency_rate              Pénznem váltási értéke
- * @property-read   int $print                      Nyomtatások száma
- * @property-read   float $net                        Számla nettó értéke
- * @property-read   float $vat                        Számla áfa értéke
- * @property-read   float $gross                      Számla bruttó értéke
- * @property-read   int $user_id                    Rögzítő felhasználó azonosítója a számlázóban
- * @property-read   int $cancelled                  Számla azonosítója ami érvénytelenítette a számlát
- * @property-read   int $cancelling                 Számla azonosítója amit érvénytelenít
+ * @property-read   int $currency_round                Pénznem kerekítés tizedes száma
+ * @property-read   float $currency_rate               Pénznem váltási értéke
+ * @property-read   int $print                         Nyomtatások száma
+ * @property-read   float $net                         Számla nettó értéke
+ * @property-read   float $vat                         Számla áfa értéke
+ * @property-read   float $gross                       Számla bruttó értéke
+ * @property-read   int $user_id                       Rögzítő felhasználó azonosítója a számlázóban
+ * @property-read   int $cancelled                     Számla azonosítója ami érvénytelenítette a számlát
+ * @property-read   int $cancelling                    Számla azonosítója amit érvénytelenít
  * @property-read   string $partner_vat_status         Partner ÁFA státusza
  * @property-read   string $partner_name               Partner neve
  * @property-read   string $partner_tax_nr             Partner adószáma
@@ -106,10 +106,11 @@ class Szamlazom_Invoice_List extends Szamlazom_List
  * @property-read   string $self_employed              Egyéni vállalkozó jelölés (Y/N)
  * @property-read   string $self_employed_nr           Egyéni vállalkozó azonosító
  * @property-read   string $individual_exemption       Alanyi adómentes jelölés (Y|N)
- * @property-read   int $type                       Számla típusa (1 normál számla, 2 díjbekérő, 3 önszámla)
- * @property-read   int $id                         Számla egyedi azonosítója a számlázóban
+ * @property-read   int $type                          Számla típusa (1 normál számla, 2 díjbekérő, 3 önszámla)
+ * @property-read   int $id                            Számla egyedi azonosítója a számlázóban
  * @property-read   string $payment_code               Fizetési mód típus kódja
  * @property        string $comment_header             Fejléc megjegyzés
+ * @property-read   string $emitter_bank_account       Kibocsájtó bankszámlaszáma
  */
 class Szamlazom_Invoice extends Szamlazom_Request
 {
