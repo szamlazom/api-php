@@ -111,6 +111,7 @@ class Szamlazom_Invoice_List extends Szamlazom_List
  * @property-read   string $payment_code               Fizetési mód típus kódja
  * @property        string $comment_header             Fejléc megjegyzés
  * @property-read   string $emitter_bank_account       Kibocsájtó bankszámlaszáma
+ * @property-read   string $emitter_bank_name          Kibocsájtó bankszámlaszám bankja
  */
 class Szamlazom_Invoice extends Szamlazom_Request
 {
