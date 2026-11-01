@@ -125,6 +125,19 @@ class Szamlazom_Invoice extends Szamlazom_Request
     }
 
     /**
+     * A $since_id azonosítónál újabb számlák lekérése, növekvő sorrendben (inkrementális szinkronizáláshoz)
+     *
+     * @param int $since_id Utoljára ismert számla azonosító
+     * @param int $page
+     * @param int $count
+     * @return Szamlazom_Invoice_List|null
+     */
+    public static function getSince($since_id, $page = 1, $count = 50)
+    {
+        return Szamlazom_Request::_getAll($page, $count, Szamlazom_Const::INVOICE_PATH, $since_id);
+    }
+
+    /**
      * @return Szamlazom_Invoice|null
      */
     public static function get($id)

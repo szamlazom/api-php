@@ -42,3 +42,20 @@ A használathoz a composer autolader betöltését követően csak az API kulcso
     $invoice->comment = 'Teszt számla léterhozása';
     $invoice->create();
 ```
+
+### Inkrementális szinkronizálás `since_id` alapján
+
+Csak az utoljára ismert azonosítónál újabb számlák jönnek vissza, növekvő sorrendben
+(`GET /v1/invoices?since_id=1234&page=1&count=50`).
+
+```php
+    $last_id = 1234; // utoljára szinkronizált számla azonosító
+    $page = 1;
+    do {
+        $list = Szamlazom_Invoice::getSince($last_id, $page, 100);
+        foreach ($list->items as $invoice) {
+            // feldolgozás...
+        }
+        $page++;
+    } while ($page <= ceil($list->count / 100));
+```

@@ -32,11 +32,16 @@ abstract class Szamlazom_Request
         unset($this->_values[$k]);
     }
 
-    protected static function _getAll($page, $count, $path)
+    protected static function _getAll($page, $count, $path, $since_id = null)
     {
         $client = new Szamlazom_Client();
 
-        $response = $client->request('GET', Szamlazom_Const::uri($path) . '?page=' . $page . '&count=' . $count);
+        $query = '?page=' . (int)$page . '&count=' . (int)$count;
+        if ((int)$since_id > 0) {
+            $query .= '&since_id=' . (int)$since_id;
+        }
+
+        $response = $client->request('GET', Szamlazom_Const::uri($path) . $query);
 
         return self::_XmlToObject($response, true);
     }
